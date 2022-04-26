@@ -1,8 +1,18 @@
 <?php
 
-require_once("Cadastro.class.php");
+require_once("Cadastro.class.php"); 
 
-class Resultado{
+//o campo Nome deve passar o valor para o método setNome
+//e você deverá imprimir o valor pelo método getNome
+
+//echo $_GET ['txtNome'];
+
+$cadastro = new Cadastro();
+
+$cadastro->setNome($_GET ['txtNome']);
+echo "Nome: " . $cadastro->getNome();
+
+/*class Resultado{
     private $nome;
     private $email;
 
@@ -14,6 +24,6 @@ class Resultado{
     
     echo $cadastro->getNome()."<br>". $cadastro->getEmail();
     }
-}
+}*/
 
 ?>
